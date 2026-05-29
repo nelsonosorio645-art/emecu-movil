@@ -39,6 +39,9 @@ interface Book {
   description: string;
   category: string;
   vercelPath?: string;
+  vercelDownloadPath?: string;
+  pages?: number;
+  fileSize?: string;
   chapters?: Chapter[];
   chaptersCount?: number;
 }
@@ -285,7 +288,7 @@ const FALLBACK_BOOKS: Book[] = [
       },
       {
         "id": "c28",
-        "title": "Párrafo V: TRAGEDIA ENTRE MOISESYEL PUEBLO Editado electrónicamente por la Cátedra \\"Maestro Nato Juan Donato Trincado\\"\"",
+        "title": "Párrafo V: TRAGEDIA ENTRE MOISESYEL PUEBLO Editado electrónicamente por la Cátedra 'Maestro Nato Juan Donato Trincado'\"",
         "order": 28
       },
       {
@@ -753,7 +756,7 @@ const FALLBACK_BOOKS: Book[] = [
       },
       {
         "id": "c6",
-        "title": "este \\"CÓDIGO DE AMOR UNIVERSAL\\", es imprescindible que haga algunas aclaraciones sobre\"",
+        "title": "este 'CÓDIGO DE AMOR UNIVERSAL', es imprescindible que haga algunas aclaraciones sobre\"",
         "order": 6
       },
       {
@@ -778,7 +781,7 @@ const FALLBACK_BOOKS: Book[] = [
       },
       {
         "id": "c11",
-        "title": "CAP. 33 – Esta \\"Carta Fundamental de la Comuna en General\\" regirá al mundo tierra para llevar al\"",
+        "title": "CAP. 33 – Esta 'Carta Fundamental de la Comuna en General' regirá al mundo tierra para llevar al\"",
         "order": 11
       },
       {
@@ -808,7 +811,7 @@ const FALLBACK_BOOKS: Book[] = [
       },
       {
         "id": "c17",
-        "title": "ARTÍCULO 1º - Se establece \\"La Comuna\\" en la tierra, como régimen universal, bajo la Ley única (CAPÍTULO SEGUNDO: LEY TRANSITORIA)\"",
+        "title": "ARTÍCULO 1º - Se establece 'La Comuna' en la tierra, como régimen universal, bajo la Ley única (CAPÍTULO SEGUNDO: LEY TRANSITORIA)\"",
         "order": 17
       },
       {
@@ -938,7 +941,7 @@ const FALLBACK_BOOKS: Book[] = [
       },
       {
         "id": "c43",
-        "title": "ARTÍCULO 1º - \\"El mundo comunizado\\", por lo tanto: todos los productos del trabajo de la\"",
+        "title": "ARTÍCULO 1º - 'El mundo comunizado', por lo tanto: todos los productos del trabajo de la\"",
         "order": 43
       },
       {
@@ -1146,7 +1149,7 @@ const FALLBACK_BOOKS: Book[] = [
       },
       {
         "id": "c8",
-        "title": "\\"Siempre más allá\\": El Maestro-Juez por el Maestro Superior\"",
+        "title": "'Siempre más allá': El Maestro-Juez por el Maestro Superior\"",
         "order": 8
       },
       {
@@ -1201,7 +1204,7 @@ const FALLBACK_BOOKS: Book[] = [
       },
       {
         "id": "c19",
-        "title": "Párrafo ii: Ley de Afinidad 3 Buscad y entender. \\"Los Juramentados\\". Marcha.\"",
+        "title": "Párrafo ii: Ley de Afinidad 3 Buscad y entender. 'Los Juramentados'. Marcha.\"",
         "order": 19
       },
       {
@@ -1231,7 +1234,7 @@ const FALLBACK_BOOKS: Book[] = [
       },
       {
         "id": "c25",
-        "title": "\\"conócete a ti mismo\\".: superior; al que por él habían sufrido todas aquellas catástrofes, porque el\"",
+        "title": "'conócete a ti mismo'.: superior; al que por él habían sufrido todas aquellas catástrofes, porque el\"",
         "order": 25
       },
       {
@@ -1391,7 +1394,7 @@ const FALLBACK_BOOKS: Book[] = [
       },
       {
         "id": "c57",
-        "title": "Punto primero: \\"En la casa de mi Padre hay muchas moradas\\", dijo Jesús, \\"Los\"",
+        "title": "Punto primero: 'En la casa de mi Padre hay muchas moradas', dijo Jesús, 'Los\"",
         "order": 57
       },
       {
@@ -1586,7 +1589,7 @@ const FALLBACK_BOOKS: Book[] = [
       },
       {
         "id": "c96",
-        "title": "Harán suyo el \\"Código de Amor Universal\\".\"",
+        "title": "Harán suyo el 'Código de Amor Universal'.\"",
         "order": 96
       },
       {
@@ -1596,17 +1599,17 @@ const FALLBACK_BOOKS: Book[] = [
       },
       {
         "id": "c98",
-        "title": "\\"Buscando a Dios\\", \\"Filosofía Austera Racional\\", \\"Los Extremos: se Tocan\\" que juntos conforman el más completo análisis Histórico,\"",
+        "title": "'Buscando a Dios', 'Filosofía Austera Racional', 'Los Extremos: se Tocan' que juntos conforman el más completo análisis Histórico,\"",
         "order": 98
       },
       {
         "id": "c99",
-        "title": "\\"Código de Amor Universal\\" Tomos I. Para el Régimen de la Comu-: en los momentos precisos que la Ley a marcado, del paso de las tres\"",
+        "title": "'Código de Amor Universal' Tomos I. Para el Régimen de la Comu-: en los momentos precisos que la Ley a marcado, del paso de las tres\"",
         "order": 99
       },
       {
         "id": "c100",
-        "title": "\\"Código de Amor Universal\\" Tomos II. Para el régimen de la Co-: muna de Amor y Ley, llegan a la humanidad las leyes que le han de",
+        "title": "'Código de Amor Universal' Tomos II. Para el régimen de la Co-: muna de Amor y Ley, llegan a la humanidad las leyes que le han de",
         "order": 100
       }
     ]
@@ -1799,7 +1802,7 @@ const FALLBACK_BOOKS: Book[] = [
       },
       {
         "id": "c36",
-        "title": "Párrafo ii: LeYes DeRiVaDas Y FaTaLes Ya dijimos en el párrafo \\"leyes del espíritu\\" las funciones de estas\"",
+        "title": "Párrafo ii: LeYes DeRiVaDas Y FaTaLes Ya dijimos en el párrafo 'leyes del espíritu' las funciones de estas\"",
         "order": 36
       },
       {
@@ -2109,7 +2112,7 @@ const FALLBACK_BOOKS: Book[] = [
       },
       {
         "id": "c98",
-        "title": "Párrafo Viii: La CaRiDaD ReLiGiosa es Un BaLDón Que se haya escrito \\"charitas\\" (caridad) antes de cicerón, nada habrá\"",
+        "title": "Párrafo Viii: La CaRiDaD ReLiGiosa es Un BaLDón Que se haya escrito 'charitas' (caridad) antes de cicerón, nada habrá\"",
         "order": 98
       },
       {
@@ -2324,7 +2327,7 @@ const FALLBACK_BOOKS: Book[] = [
       },
       {
         "id": "c141",
-        "title": "Punto primero: \\"naDa MÁs De nUeVo se PUeDe DeCiR, aQUÍ ni\"",
+        "title": "Punto primero: 'naDa MÁs De nUeVo se PUeDe DeCiR, aQUÍ ni\"",
         "order": 141
       },
       {
@@ -2349,12 +2352,12 @@ const FALLBACK_BOOKS: Book[] = [
       },
       {
         "id": "c146",
-        "title": "cando a Dios\\", \\"Filosofía Austera Racional\\", \\"Los Extremos se Tocan\\"\"",
+        "title": "cando a Dios', 'Filosofía Austera Racional', 'Los Extremos se Tocan'\"",
         "order": 146
       },
       {
         "id": "c147",
-        "title": "\\"Código de Amor Universal\\" Tomos I. Para el Régimen de la\"",
+        "title": "'Código de Amor Universal' Tomos I. Para el Régimen de la\"",
         "order": 147
       },
       {
@@ -2364,7 +2367,7 @@ const FALLBACK_BOOKS: Book[] = [
       },
       {
         "id": "c149",
-        "title": "\\"Código de Amor Universal\\" Tomos II. Para el régimen de la Co-",
+        "title": "'Código de Amor Universal' Tomos II. Para el régimen de la Co-",
         "order": 149
       }
     ]
@@ -2417,7 +2420,7 @@ const FALLBACK_BOOKS: Book[] = [
       },
       {
         "id": "c8",
-        "title": "Pregunta 6: ¿Qué se entiende por \\"La: Comuna\\"?\"",
+        "title": "Pregunta 6: ¿Qué se entiende por 'La: Comuna'?\"",
         "order": 8
       },
       {
@@ -2857,7 +2860,7 @@ const FALLBACK_BOOKS: Book[] = [
       },
       {
         "id": "c96",
-        "title": "donde fué llevado por José de Arimatea: a los 88 días después de la crucifixión. Pero este punto culminante, como todos los de Jesús, en la \\"Filosofía Austera Racional\\", están documentados.\"",
+        "title": "donde fué llevado por José de Arimatea: a los 88 días después de la crucifixión. Pero este punto culminante, como todos los de Jesús, en la 'Filosofía Austera Racional', están documentados.\"",
         "order": 96
       },
       {
@@ -2960,7 +2963,7 @@ const FALLBACK_BOOKS: Book[] = [
       },
       {
         "id": "c9",
-        "title": "PÁRRAFO II: CÓMO SE FORMA EL ESPIRITISMO \\"El Universo solidarizado\\" hemos dicho en el primer verso de nuestra proclama y en\"",
+        "title": "PÁRRAFO II: CÓMO SE FORMA EL ESPIRITISMO 'El Universo solidarizado' hemos dicho en el primer verso de nuestra proclama y en\"",
         "order": 9
       },
       {
@@ -3050,7 +3053,7 @@ const FALLBACK_BOOKS: Book[] = [
       },
       {
         "id": "c27",
-        "title": "En nuestra \\"Filosofía Austera Racional\\" y en \\"El Primer Rayo de luz: >> lanzamos un\"",
+        "title": "En nuestra 'Filosofía Austera Racional' y en 'El Primer Rayo de luz: >> lanzamos un\"",
         "order": 27
       },
       {
@@ -3065,7 +3068,7 @@ const FALLBACK_BOOKS: Book[] = [
       },
       {
         "id": "c30",
-        "title": "PÁRRAFO II: ELASTICIDAD DEL ALMA Aun cuando este punto corresponde al capítulo \\"Desdoblamiento\\", aquí lo\"",
+        "title": "PÁRRAFO II: ELASTICIDAD DEL ALMA Aun cuando este punto corresponde al capítulo 'Desdoblamiento', aquí lo\"",
         "order": 30
       },
       {
@@ -3125,7 +3128,7 @@ const FALLBACK_BOOKS: Book[] = [
       },
       {
         "id": "c42",
-        "title": "en \\"El Espiritismo en su Asiento\"",
+        "title": "en 'El Espiritismo en su Asiento\"",
         "order": 42
       },
       {
@@ -3140,17 +3143,17 @@ const FALLBACK_BOOKS: Book[] = [
       },
       {
         "id": "c45",
-        "title": "PÁRRAFO II: \\"CARTA ORGÁNICA\\" Autorizado como maestro fundador de la \\"Escuela Magnético-Espiritual de la\"",
+        "title": "PÁRRAFO II: 'CARTA ORGÁNICA' Autorizado como maestro fundador de la 'Escuela Magnético-Espiritual de la\"",
         "order": 45
       },
       {
         "id": "c46",
-        "title": "\\"CÓDIGO DE AMOR UNIVERSAL\\"\"",
+        "title": "'CÓDIGO DE AMOR UNIVERSAL'\"",
         "order": 46
       },
       {
         "id": "c47",
-        "title": "CAPÍTULO PRIMERO: \\"Constitución por la que se hace la proclamación de la comuna en la Tierra. Ley\"",
+        "title": "CAPÍTULO PRIMERO: 'Constitución por la que se hace la proclamación de la comuna en la Tierra. Ley\"",
         "order": 47
       },
       {
@@ -3290,7 +3293,7 @@ const FALLBACK_BOOKS: Book[] = [
       },
       {
         "id": "c75",
-        "title": "En nuestra \\" Filosofía Austera Racional\\", en < El Espiritismo en su Asiento\\" y \\" El\"",
+        "title": "En nuestra ' Filosofía Austera Racional', en < El Espiritismo en su Asiento' y ' El\"",
         "order": 75
       },
       {
@@ -3353,7 +3356,7 @@ const FALLBACK_BOOKS: Book[] = [
     "chapters": [
       {
         "id": "c1",
-        "title": "ESCUELA MAGNETICO – ESPIRITUAL DE LA COMUNA UNIVERSAL: \\"EL MAGNETISMO EN SU ORIGEN\\"\"",
+        "title": "ESCUELA MAGNETICO – ESPIRITUAL DE LA COMUNA UNIVERSAL: 'EL MAGNETISMO EN SU ORIGEN'\"",
         "order": 1
       },
       {
@@ -3708,7 +3711,7 @@ const FALLBACK_BOOKS: Book[] = [
       },
       {
         "id": "c72",
-        "title": "\\"METODO SUPREMO\\": CUPULA MAXIMA\"",
+        "title": "'METODO SUPREMO': CUPULA MAXIMA\"",
         "order": 72
       },
       {
@@ -3768,7 +3771,7 @@ const FALLBACK_BOOKS: Book[] = [
       },
       {
         "id": "c84",
-        "title": "\\"Ión\\" \\"Ionización\\"\"",
+        "title": "'Ión' 'Ionización'\"",
         "order": 84
       },
       {
@@ -3871,7 +3874,7 @@ const FALLBACK_BOOKS: Book[] = [
       },
       {
         "id": "c14",
-        "title": "llevar a sus lectores a las mansiones de \\"ATHANASIA\\" (inmortalidad) seguro de conseguir su\"",
+        "title": "llevar a sus lectores a las mansiones de 'ATHANASIA' (inmortalidad) seguro de conseguir su\"",
         "order": 14
       },
       {
@@ -3881,7 +3884,7 @@ const FALLBACK_BOOKS: Book[] = [
       },
       {
         "id": "c16",
-        "title": "\\"Siempre más allá\\"\"",
+        "title": "'Siempre más allá'\"",
         "order": 16
       },
       {
@@ -4269,7 +4272,7 @@ const FALLBACK_BOOKS: Book[] = [
       },
       {
         "id": "c6",
-        "title": "\\"\"",
+        "title": "'\"",
         "order": 6
       },
       {
@@ -4657,7 +4660,7 @@ const FALLBACK_BOOKS: Book[] = [
       },
       {
         "id": "c18",
-        "title": "Mayo 28 - e contestó: \\"Tienes que luchar mucho,\"",
+        "title": "Mayo 28 - e contestó: 'Tienes que luchar mucho,\"",
         "order": 18
       },
       {
@@ -4672,7 +4675,7 @@ const FALLBACK_BOOKS: Book[] = [
       },
       {
         "id": "c21",
-        "title": "Junio 6 - fe en Dios y constancia. Adiós\\".\"",
+        "title": "Junio 6 - fe en Dios y constancia. Adiós'.\"",
         "order": 21
       },
       {
@@ -4772,7 +4775,7 @@ const FALLBACK_BOOKS: Book[] = [
       },
       {
         "id": "c41",
-        "title": "Julio 18 de 1910 (hora 12 del día) - hecho, al que no usó de misericordia\\".\"",
+        "title": "Julio 18 de 1910 (hora 12 del día) - hecho, al que no usó de misericordia'.\"",
         "order": 41
       },
       {
@@ -5605,7 +5608,7 @@ const FALLBACK_BOOKS: Book[] = [
       },
       {
         "id": "c22",
-        "title": "La hermana Juana, nos trajo saludos de todos los agradecidos - que lo fajen si barrigón ha nacido\\".\"",
+        "title": "La hermana Juana, nos trajo saludos de todos los agradecidos - que lo fajen si barrigón ha nacido'.\"",
         "order": 22
       },
       {
@@ -7682,7 +7685,7 @@ const FALLBACK_BOOKS: Book[] = [
       },
       {
         "id": "c16",
-        "title": "Art. 13°.- La tolerancia es buena, considerando que, \\"cada hombre es un\"",
+        "title": "Art. 13°.- La tolerancia es buena, considerando que, 'cada hombre es un\"",
         "order": 16
       },
       {
@@ -8053,7 +8056,7 @@ const FALLBACK_BOOKS: Book[] = [
       },
       {
         "id": "c25",
-        "title": "PÁRRAFO IV: ECONOMÍA MORAL Recordad aquí nuestro prólogo de la \\"Filosofía Austera Racional\\", porque entraña lo\"",
+        "title": "PÁRRAFO IV: ECONOMÍA MORAL Recordad aquí nuestro prólogo de la 'Filosofía Austera Racional', porque entraña lo\"",
         "order": 25
       },
       {
@@ -8318,7 +8321,7 @@ const FALLBACK_BOOKS: Book[] = [
       },
       {
         "id": "c78",
-        "title": "\\"Conócete a ti mismo\\".",
+        "title": "'Conócete a ti mismo'.",
         "order": 78
       }
     ]
@@ -8361,7 +8364,7 @@ const FALLBACK_BOOKS: Book[] = [
       },
       {
         "id": "c6",
-        "title": "CAPÍTULO PRIMERO: LEY FUNDAMENTALYÚNICA: \\"EL AMOR\\"\"",
+        "title": "CAPÍTULO PRIMERO: LEY FUNDAMENTALYÚNICA: 'EL AMOR'\"",
         "order": 6
       },
       {
@@ -8376,7 +8379,7 @@ const FALLBACK_BOOKS: Book[] = [
       },
       {
         "id": "c9",
-        "title": "Austera Racional\\", \\"Los Cinco Amores\\" y en el \\"Conócete a ti mismo\\".\"",
+        "title": "Austera Racional', 'Los Cinco Amores' y en el 'Conócete a ti mismo'.\"",
         "order": 9
       },
       {
@@ -8511,7 +8514,7 @@ const FALLBACK_BOOKS: Book[] = [
       },
       {
         "id": "c36",
-        "title": "CAPÍTULO VEINTEYSIETE: LUZ PLENA EN LA TIERRA 734. -Sólo los malvados y los hipócritas temen la luz:: \\"a los ladrones les estorba la luz\\" dice el proverbio y vemos la verdad confirmada en todos los hechos\"",
+        "title": "CAPÍTULO VEINTEYSIETE: LUZ PLENA EN LA TIERRA 734. -Sólo los malvados y los hipócritas temen la luz:: 'a los ladrones les estorba la luz' dice el proverbio y vemos la verdad confirmada en todos los hechos\"",
         "order": 36
       },
       {
@@ -8546,7 +8549,7 @@ const FALLBACK_BOOKS: Book[] = [
       },
       {
         "id": "c43",
-        "title": "este sencillo mandato: \\"AMA A TU HERMANO\\".\"",
+        "title": "este sencillo mandato: 'AMA A TU HERMANO'.\"",
         "order": 43
       },
       {
@@ -8576,7 +8579,7 @@ const FALLBACK_BOOKS: Book[] = [
       },
       {
         "id": "c49",
-        "title": "CAPÍTULO 35: EPÍLOGO Este libro no debía tener por remate un epílogo, pero después de escribirlo y mientras se ha esperado inútilmente que llegara el hombre que tenía deber de dar medios, se ha escrito otro libro titulado \\"Profilaxis de la Vida\\" y en él actúan 24\"",
+        "title": "CAPÍTULO 35: EPÍLOGO Este libro no debía tener por remate un epílogo, pero después de escribirlo y mientras se ha esperado inútilmente que llegara el hombre que tenía deber de dar medios, se ha escrito otro libro titulado 'Profilaxis de la Vida' y en él actúan 24\"",
         "order": 49
       },
       {
@@ -8874,7 +8877,7 @@ const FALLBACK_BOOKS: Book[] = [
       },
       {
         "id": "c51",
-        "title": "CONTESTACION PONTIFICIAAUN DISCURSO DEL DOCTOR JUAN GIURIATI: Roma, abril 27 (United).__ \\"L'Osservatore Romano\\" publica el texto de una carta que el\"",
+        "title": "CONTESTACION PONTIFICIAAUN DISCURSO DEL DOCTOR JUAN GIURIATI: Roma, abril 27 (United).__ 'L'Osservatore Romano' publica el texto de una carta que el\"",
         "order": 51
       },
       {
@@ -9072,7 +9075,7 @@ const FALLBACK_BOOKS: Book[] = [
       },
       {
         "id": "c21",
-        "title": "CapÍTUlo sÉpTiMo: la edUCaCiÓN GeNeral HasTa la edad de proveCHo \\"A rudas batallas me mandó el Señor\\", escribió Shet en el Sánscrito; y lo cantan, pero lo practican al revés todas las religiones, por las que, los\"",
+        "title": "CapÍTUlo sÉpTiMo: la edUCaCiÓN GeNeral HasTa la edad de proveCHo 'A rudas batallas me mandó el Señor', escribió Shet en el Sánscrito; y lo cantan, pero lo practican al revés todas las religiones, por las que, los\"",
         "order": 21
       },
       {
@@ -9147,12 +9150,12 @@ const FALLBACK_BOOKS: Book[] = [
       },
       {
         "id": "c36",
-        "title": "CapÍTUlo viGÉsiMo: TraGedia fiNal; sUs Horrores por falTa de profilaxis \\"El sexto ángel tocó la trompeta, y oí una voz de los cuatro cuernos del altar de oro, el cual está delante de Jehová. Que decía al sexto ángel que\"",
+        "title": "CapÍTUlo viGÉsiMo: TraGedia fiNal; sUs Horrores por falTa de profilaxis 'El sexto ángel tocó la trompeta, y oí una voz de los cuatro cuernos del altar de oro, el cual está delante de Jehová. Que decía al sexto ángel que\"",
         "order": 36
       },
       {
         "id": "c37",
-        "title": "del Dios de las religiones.\\"\"",
+        "title": "del Dios de las religiones.'\"",
         "order": 37
       },
       {
@@ -9167,7 +9170,7 @@ const FALLBACK_BOOKS: Book[] = [
       },
       {
         "id": "c40",
-        "title": "CapÍTUlo viGÉsiMo seGUNdo: las proMesas del Creador soN sU profilaxis p ara sUs HiJos; la N a TU raleza las CUMple al MiNUTo MaTeMÁTiCo. \\"Porque yo endurezco el coraízón de Faraón, para que os libertéis por\"",
+        "title": "CapÍTUlo viGÉsiMo seGUNdo: las proMesas del Creador soN sU profilaxis p ara sUs HiJos; la N a TU raleza las CUMple al MiNUTo MaTeMÁTiCo. 'Porque yo endurezco el coraízón de Faraón, para que os libertéis por\"",
         "order": 40
       },
       {
@@ -9192,7 +9195,7 @@ const FALLBACK_BOOKS: Book[] = [
       },
       {
         "id": "c45",
-        "title": "GRANDE, LA MADRE DE LAS FORNICACIONES\\", y repite y termina\"",
+        "title": "GRANDE, LA MADRE DE LAS FORNICACIONES', y repite y termina\"",
         "order": 45
       },
       {
