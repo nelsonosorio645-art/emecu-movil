@@ -35,45 +35,255 @@ interface Book {
 
 const FALLBACK_BOOKS: Book[] = [
   {
-    id: "b1",
-    title: "Ciencia y Filosofía",
-    author: "Maestro Joaquín Trincado",
-    description: "Fundamentos filosóficos de la Magna Fraternidad Universal",
-    vercelDownloadPath: "/descargas/ciencia-filosofia",
-    category: "Doctrina",
-    pages: 320,
-    fileSize: "4.2 MB",
+    "id": "alfaqui-vademecum",
+    "title": "Alfaqui Vademecum",
+    "author": "Maestro Joaquín Trincado",
+    "description": "Obra doctrinal: Alfaqui Vademecum.",
+    "vercelDownloadPath": "/biblioteca/Alfaqui-Vademecum.pdf",
+    "category": "Doctrina",
+    "pages": 150,
+    "fileSize": "3.5 MB"
   },
   {
-    id: "b2",
-    title: "El Libro del Ser",
-    author: "Maestro Joaquín Trincado",
-    description: "La naturaleza del ser humano y su destino espiritual",
-    vercelDownloadPath: "/descargas/libro-del-ser",
-    category: "Espiritualidad",
-    pages: 248,
-    fileSize: "3.1 MB",
+    "id": "buscando-a-dios-joaquin-trincado",
+    "title": "Buscando A Dios Joaquin Trincado",
+    "author": "Maestro Joaquín Trincado",
+    "description": "Obra doctrinal: Buscando A Dios Joaquin Trincado.",
+    "vercelDownloadPath": "/biblioteca/Buscando-A-Dios-Joaquin-Trincado.pdf",
+    "category": "Doctrina",
+    "pages": 150,
+    "fileSize": "3.5 MB"
   },
   {
-    id: "b3",
-    title: "Tratado de Ética Universal",
-    author: "Maestro Joaquín Trincado",
-    description: "Principios éticos para la convivencia armoniosa",
-    vercelDownloadPath: "/descargas/etica-universal",
-    category: "Ética",
-    pages: 196,
-    fileSize: "2.5 MB",
+    "id": "codigo-de-amor-universal-tomo-2",
+    "title": "Codigo De Amor Universal Tomo 2",
+    "author": "Maestro Joaquín Trincado",
+    "description": "Obra doctrinal: Codigo De Amor Universal Tomo 2.",
+    "vercelDownloadPath": "/biblioteca/Codigo-De-Amor-Universal-Tomo2-1975.pdf",
+    "category": "Doctrina",
+    "pages": 150,
+    "fileSize": "3.5 MB"
   },
   {
-    id: "b4",
-    title: "Metafísica Práctica",
-    author: "Maestro Joaquín Trincado",
-    description: "Las leyes del universo aplicadas a la vida cotidiana",
-    vercelDownloadPath: "/descargas/metafisica-practica",
-    category: "Metafísica",
-    pages: 280,
-    fileSize: "3.8 MB",
+    "id": "codigo-de-amor-universal-tomo-1",
+    "title": "Codigo De Amor Universal Tomo 1",
+    "author": "Maestro Joaquín Trincado",
+    "description": "Obra doctrinal: Codigo De Amor Universal Tomo 1.",
+    "vercelDownloadPath": "/biblioteca/CodigodeAmorUniversalTomoI-1.pdf",
+    "category": "Doctrina",
+    "pages": 150,
+    "fileSize": "3.5 MB"
   },
+  {
+    "id": "conocete-a-ti-mismo-1",
+    "title": "Conocete A Ti Mismo 1",
+    "author": "Maestro Joaquín Trincado",
+    "description": "Obra doctrinal: Conocete A Ti Mismo 1.",
+    "vercelDownloadPath": "/biblioteca/Conocete_a_Ti_Mismo-1.pdf",
+    "category": "Doctrina",
+    "pages": 150,
+    "fileSize": "3.5 MB"
+  },
+  {
+    "id": "cuestionario-espirita-racional",
+    "title": "Cuestionario Espirita Racional",
+    "author": "Maestro Joaquín Trincado",
+    "description": "Obra doctrinal: Cuestionario Espirita Racional.",
+    "vercelDownloadPath": "/biblioteca/cuestionario espirita racional.pdf",
+    "category": "Doctrina",
+    "pages": 150,
+    "fileSize": "3.5 MB"
+  },
+  {
+    "id": "el-espiritismo-estudiado",
+    "title": "El Espiritismo Estudiado",
+    "author": "Maestro Joaquín Trincado",
+    "description": "Obra doctrinal: El Espiritismo Estudiado.",
+    "vercelDownloadPath": "/biblioteca/EL ESPIRITISMO ESTUDIADO.pdf",
+    "category": "Doctrina",
+    "pages": 150,
+    "fileSize": "3.5 MB"
+  },
+  {
+    "id": "el-magnetismo-en-su-origen",
+    "title": "El Magnetismo En Su Origen",
+    "author": "Maestro Joaquín Trincado",
+    "description": "Obra doctrinal: El Magnetismo En Su Origen.",
+    "vercelDownloadPath": "/biblioteca/el magnetismo en su origen.pdf",
+    "category": "Doctrina",
+    "pages": 150,
+    "fileSize": "3.5 MB"
+  },
+  {
+    "id": "espiritismo-en-su-asiento",
+    "title": "Espiritismo En Su Asiento",
+    "author": "Maestro Joaquín Trincado",
+    "description": "Obra doctrinal: Espiritismo En Su Asiento.",
+    "vercelDownloadPath": "/biblioteca/ESPIRITISMO EN SU ASIENTO.pdf",
+    "category": "Doctrina",
+    "pages": 150,
+    "fileSize": "3.5 MB"
+  },
+  {
+    "id": "estatutos-y-reglamentos",
+    "title": "Estatutos Y Reglamentos",
+    "author": "Maestro Joaquín Trincado",
+    "description": "Obra doctrinal: Estatutos Y Reglamentos.",
+    "vercelDownloadPath": "/biblioteca/estatutos y reglamentos.pdf",
+    "category": "Doctrina",
+    "pages": 150,
+    "fileSize": "3.5 MB"
+  },
+  {
+    "id": "filosofia-enciclopedica-universal-tomo-1",
+    "title": "Filosofia Enciclopedica Universal Tomo 1",
+    "author": "Maestro Joaquín Trincado",
+    "description": "Obra doctrinal: Filosofia Enciclopedica Universal Tomo 1.",
+    "vercelDownloadPath": "/biblioteca/Filosofia-Enciclopedica-Universal-Tomo 1.pdf",
+    "category": "Doctrina",
+    "pages": 150,
+    "fileSize": "3.5 MB"
+  },
+  {
+    "id": "filosofia-enciclopedica-universal-tomo-2",
+    "title": "Filosofia Enciclopedica Universal Tomo 2",
+    "author": "Maestro Joaquín Trincado",
+    "description": "Obra doctrinal: Filosofia Enciclopedica Universal Tomo 2.",
+    "vercelDownloadPath": "/biblioteca/Filosofia-Enciclopedica-Universal-Tomo 2.pdf",
+    "category": "Doctrina",
+    "pages": 150,
+    "fileSize": "3.5 MB"
+  },
+  {
+    "id": "filosof-a-austera-racional",
+    "title": "Filosofía Austera Racional",
+    "author": "Maestro Joaquín Trincado",
+    "description": "Obra doctrinal: Filosofía Austera Racional.",
+    "vercelDownloadPath": "/biblioteca/FILOSOFÍA AUSTERA RACIONAL.pdf",
+    "category": "Doctrina",
+    "pages": 150,
+    "fileSize": "3.5 MB"
+  },
+  {
+    "id": "jes-s-hombre-y-no-dios",
+    "title": "Jesús Hombre Y No Dios",
+    "author": "Maestro Joaquín Trincado",
+    "description": "Obra doctrinal: Jesús Hombre Y No Dios.",
+    "vercelDownloadPath": "/biblioteca/JESÚS HOMBREYNO DIOS.pdf",
+    "category": "Doctrina",
+    "pages": 150,
+    "fileSize": "3.5 MB"
+  },
+  {
+    "id": "la-revolucion-de-mexico",
+    "title": "La Revolución De México",
+    "author": "Maestro Joaquín Trincado",
+    "description": "Obra doctrinal: La Revolución De México.",
+    "vercelDownloadPath": "/biblioteca/LA REVOLUCIÓN DE MÉXICO.pdf",
+    "category": "Doctrina",
+    "pages": 150,
+    "fileSize": "3.5 MB"
+  },
+  {
+    "id": "laudode-rigor",
+    "title": "Laudode Rigor",
+    "author": "Maestro Joaquín Trincado",
+    "description": "Obra doctrinal: Laudode Rigor.",
+    "vercelDownloadPath": "/biblioteca/laudode rigor.pdf",
+    "category": "Doctrina",
+    "pages": 150,
+    "fileSize": "3.5 MB"
+  },
+  {
+    "id": "ley-de-las-mediumidades-en-general",
+    "title": "Ley De Las Mediumidades En General",
+    "author": "Maestro Joaquín Trincado",
+    "description": "Obra doctrinal: Ley De Las Mediumidades En General.",
+    "vercelDownloadPath": "/biblioteca/LEY DE LAS MEDIUMIDADES EN GENERAL.pdf",
+    "category": "Doctrina",
+    "pages": 150,
+    "fileSize": "3.5 MB"
+  },
+  {
+    "id": "los-cinco-amores",
+    "title": "Los Cinco Amores",
+    "author": "Maestro Joaquín Trincado",
+    "description": "Obra doctrinal: Los Cinco Amores.",
+    "vercelDownloadPath": "/biblioteca/LOS CINCO AMORES.pdf",
+    "category": "Doctrina",
+    "pages": 150,
+    "fileSize": "3.5 MB"
+  },
+  {
+    "id": "los-extremos-se-tocan",
+    "title": "Los Extremos Se Tocan",
+    "author": "Maestro Joaquín Trincado",
+    "description": "Obra doctrinal: Los Extremos Se Tocan.",
+    "vercelDownloadPath": "/biblioteca/los extremos se tocan.pdf",
+    "category": "Doctrina",
+    "pages": 150,
+    "fileSize": "3.5 MB"
+  },
+  {
+    "id": "primer-rayo-de-luz",
+    "title": "Primer Rayo De Luz",
+    "author": "Maestro Joaquín Trincado",
+    "description": "Obra doctrinal: Primer Rayo De Luz.",
+    "vercelDownloadPath": "/biblioteca/PRIMER-RAYO-DE-LUZ.pdf",
+    "category": "Doctrina",
+    "pages": 150,
+    "fileSize": "3.5 MB"
+  },
+  {
+    "id": "profilaxis-de-la-vida",
+    "title": "Profilaxis De La Vida",
+    "author": "Maestro Joaquín Trincado",
+    "description": "Obra doctrinal: Profilaxis De La Vida.",
+    "vercelDownloadPath": "/biblioteca/Profilaxis-de-la-vida.pdf",
+    "category": "Doctrina",
+    "pages": 150,
+    "fileSize": "3.5 MB"
+  },
+  {
+    "id": "reglamento-interno-e-m-e-delac--u--1",
+    "title": "Reglamento Interno E.m.e.delac .u. 1",
+    "author": "Maestro Joaquín Trincado",
+    "description": "Obra doctrinal: Reglamento Interno E.m.e.delac .u. 1.",
+    "vercelDownloadPath": "/biblioteca/Reglamento-Interno-E.M.E.delaC_.U.-1.pdf",
+    "category": "Doctrina",
+    "pages": 150,
+    "fileSize": "3.5 MB"
+  },
+  {
+    "id": "tercera-etapa",
+    "title": "Tercera Etapa",
+    "author": "Maestro Joaquín Trincado",
+    "description": "Obra doctrinal: Tercera Etapa.",
+    "vercelDownloadPath": "/biblioteca/Tercera-Etapa.pdf",
+    "category": "Doctrina",
+    "pages": 150,
+    "fileSize": "3.5 MB"
+  },
+  {
+    "id": "v-i-d-a---d-e----m-a-r-i-a",
+    "title": "VIDA   D E    MARIA",
+    "author": "Maestro Joaquín Trincado",
+    "description": "Obra doctrinal: VIDA   D E    MARIA.",
+    "vercelDownloadPath": "/biblioteca/VIDA   D E    MARIA.pdf",
+    "category": "Doctrina",
+    "pages": 150,
+    "fileSize": "3.5 MB"
+  },
+  {
+    "id": "discurso-obispo-strossmayer",
+    "title": "[1library.co] Discurso Obispo Strossmayer",
+    "author": "Maestro Joaquín Trincado",
+    "description": "Obra doctrinal: [1library.co] Discurso Obispo Strossmayer.",
+    "vercelDownloadPath": "/biblioteca/[1library.co] discurso obispo strossmayer.pdf",
+    "category": "Doctrina",
+    "pages": 150,
+    "fileSize": "3.5 MB"
+  }
 ];
 
 export default function LibrosScreen() {

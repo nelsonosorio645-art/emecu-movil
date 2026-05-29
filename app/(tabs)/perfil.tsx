@@ -14,6 +14,9 @@ import {
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { useAuth } from "@/contexts/AuthContext";
 import { useColors } from "@/hooks/useColors";
+import { db } from "@/config/firebase";
+import { doc, onSnapshot, collection, query, where, getDocs } from "firebase/firestore";
+import { useEffect } from "react";
 
 interface StatItem {
   label: string;
@@ -21,17 +24,62 @@ interface StatItem {
   icon: string;
 }
 
+const GRADE_LESSONS = [50, 113, 67, 85, 83, 261, 188, 120, 125, 145, 165, 174, 144];
+
 export default function PerfilScreen() {
   const colors = useColors();
   const insets = useSafeAreaInsets();
   const { user, logout } = useAuth();
   const router = useRouter();
   const [loggingOut, setLoggingOut] = useState<boolean>(false);
+  const [studentGrade, setStudentGrade] = useState<number>(1);
+  const [studentLesson, setStudentLesson] = useState<number>(1);
+  const [totalInteractions, setTotalInteractions] = useState<number>(0);
+
+  // Fetch real-time progress and interaction statistics from Firestore
+  useEffect(() => {
+    if (!user) return;
+
+    // 1. Listen to student progress
+    const unsubProgress = onSnapshot(doc(db, "students", user.uid), (snap) => {
+      if (snap.exists()) {
+        const data = snap.data();
+        setStudentGrade(data.currentGrade || 1);
+        setStudentLesson(data.currentLesson || 1);
+      }
+    });
+
+    // 2. Query total interactions across all study sessions
+    const fetchInteractions = async () => {
+      try {
+        const q = query(collection(db, "sessions"), where("uid", "==", user.uid));
+        const snap = await getDocs(q);
+        let sum = 0;
+        snap.forEach((d) => {
+          sum += d.data().interacciones || 0;
+        });
+        setTotalInteractions(sum);
+      } catch (err) {
+        console.warn("Error fetching total interactions:", err);
+      }
+    };
+    fetchInteractions();
+
+    return () => {
+      unsubProgress();
+    };
+  }, [user?.uid]);
+
+  // Calculate accumulated lessons viewed
+  let totalLessonsViewed = studentLesson;
+  for (let i = 0; i < studentGrade - 1; i++) {
+    totalLessonsViewed += GRADE_LESSONS[i] || 0;
+  }
 
   const stats: StatItem[] = [
-    { label: "Grado", value: "1°", icon: "award" },
-    { label: "Temas", value: "—", icon: "book-open" },
-    { label: "Mensajes", value: "—", icon: "message-circle" },
+    { label: "Grado", value: `${studentGrade}°`, icon: "award" },
+    { label: "Lecciones", value: String(totalLessonsViewed), icon: "book-open" },
+    { label: "Interacciones", value: String(totalInteractions), icon: "message-circle" },
   ];
 
   const handleLogout = () => {
